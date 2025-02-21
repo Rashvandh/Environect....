@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centers the logo */
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #202020;
+    color: #fff;
+    position: relative;
+}
+
+/* Logo Container */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Ensures the logo stays centered */
+}
+
+/* Logo Image */
+.logo img {
+    height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    right: 2rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Menu Icon for Mobile */
+.menu-bars {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+}
+
+.menu-bars span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Main Content */
+.content {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #ffffff;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: rgb(0, 59, 0);
+}
+
+/* Buttons Section */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Button & Icon Alignment */
+.role {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Buttons */
+.btn {
+    width: 200px;
+    height: 40px;
+    background: #4caf50;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s ease;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #1B5E20;
+}
+
+/* Icons */
+.role img {
+    width: 100px;
+    height: auto;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #202020;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-bars {
+        display: flex;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 150px;
+    }
+
+    .buttons-container {
+        gap: 15px;
+    }
+}

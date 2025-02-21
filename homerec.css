@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centers the logo */
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #202020;
+    color: #fff;
+    position: relative;
+}
+
+/* Logo Container */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Ensures the logo stays centered */
+}
+
+/* Logo Image */
+.logo img {
+    height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    right: 2rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Menu Icon for Mobile */
+.menu-bars {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+}
+
+.menu-bars span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login-btn {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+.seller {
+    background-color: #28a745;
+}
+.buyer {
+    background-color: #007bff;
+}

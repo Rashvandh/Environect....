@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Environect</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="5.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="Base.html">Login</a></li>
+                <li><a href="cart.html">Go to Cart</a></li>
+            </ul>
+            <div class="menu-bars" onclick="toggleMenu()">
+                <span>Environect</span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+            <button>Contact Us</button>
+            <button>About Us</button>
+            <button>Our Services</button>
+            <button>For Business</button>
+            <button>For Recyclers</button>
+            <button>For Consumers</button>
+            <button>Benefits</button>
+            <button>Why</button>
+            <button>FAQs</button>
+            <button>Help</button>
+            <button>Register</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="header">
+            <h1>Environect</h1>
+            <p>Your Sustainable Shopping Destination</p>
+        </div>
+
+        <div class="product-scroll-container" id="scrollContainer">
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="Reycled Notebook WhatsApp Image 2025-02-13 at 14.39.28_341e63c6.jpg" alt="Recycled Notebook">
+                    <h3>Recycled Notebook</h3>
+                    <p>Eco-friendly notebook made from recycled paper.</p><br>
+                    <p class="price">₹80.99</p>
+                    <p class="discountprice">₹39.99</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="Recycled handbag WhatsApp Image 2025-02-13 at 14.39.27_331e95d6.jpg" alt="Recycled Tote Bag">
+                    <h3>Recycled Hand Bag</h3>
+                    <p>Stylish and durable tote bag made from<br>recycled materials.</p><br>
+                    <p class="price">₹799.99</p>
+                    <p class="discountprice">₹499.99</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="Recycled Sneakers WhatsApp Image 2025-02-13 at 14.39.27_e827a2fe.jpg" alt="Recycled Sneakers">
+                    <h3>Recycled Sneakers</h3>
+                    <p>Comfortable sneakers made from <br>recycled fabrics.</p><br>
+                    <p class="price">₹1599.99</p>
+                    <p class="discountprice">₹599.99</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="recycled bag 2025-02-13 at 14.39.26_318b9f0e.jpg" alt="Recycled Backpack">
+                    <h3>Recycled Backpack</h3>
+                    <p>Durable backpack made from <br>recycled materials.</p><br>
+                    <p class="price">₹1599.99</p>
+                    <p class="discountprice">₹899.99</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="Sunglass Image 2025-02-13 at 14.39.26_aef6d186.jpg" alt="Recycled Sunglasses">
+                    <h3>Recycled Sunglasses</h3>
+                    <p>Stylish sunglasses made from  <br> recycled plastic.</p><br>
+                    <p class="price">₹200.99</p>
+                    <p class="discountprice">₹99.99</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="Recycled Hoodie.jpeg" alt="Recycled Hoodie">
+                    <h3>Recycled Hoodie</h3>
+                    <p>Eco-conscious hoodie made from  <br>recycled plastics.</p><br>
+                    <p class="price">₹1099.99</p>
+                    <p class="discountprice">₹699.99</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Go to Cart Link Below the Product Section -->
+    <div class="cart-link">
+        <a href="cart.html">Go to Cart</a>
+    </div>
+
+    <script>
+        function addToCart(productName, productImage, productPrice) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({ name: productName, image: productImage, price: productPrice });
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        document.querySelectorAll('.btn').forEach((button, index) => {
+            button.addEventListener('click', () => {
+                const productName = button.previousElementSibling.previousElementSibling.textContent;
+                const productImage = button.previousElementSibling.previousElementSibling.previousElementSibling.src;
+                const productPrice = button.previousElementSibling.textContent;
+                addToCart(productName, productImage, productPrice);
+            });
+        });
+    </script>
+</body>
+</html>
